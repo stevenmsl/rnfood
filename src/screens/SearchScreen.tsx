@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import {Text} from 'react-native';
+import {ScrollView, Text} from 'react-native';
 import SearchBar from '../components/SearchBar';
 import useResults from '../hooks/useResults';
+import ResultList from '../components/ResultList';
 
 const SearchScreen = () => {
   const [term, setTerm] = useState('');
@@ -23,6 +24,11 @@ const SearchScreen = () => {
         }}
       />
       {errorMessage ? <Text>{errorMessage}</Text> : null}
+      <ScrollView>
+        <ResultList results={filterByPrice('$')} title="Cost Effective" />
+        <ResultList results={filterByPrice('$$')} title="Bit Pricier" />
+        <ResultList results={filterByPrice('$$$')} title="Big Spender" />
+      </ScrollView>
     </>
   );
 };

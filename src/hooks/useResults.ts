@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import {Business} from '../services/types';
 import yelp from '../services/yelp';
 
-/*
+/*ref-01
   - serve as a middleman between services (APIs) and the
     UI components
 */

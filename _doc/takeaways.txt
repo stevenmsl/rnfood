@@ -1,0 +1,17 @@
+- define custom hooks to act as a middleman
+  between the UI components and the services
+  that call out to APIs 
+  - #ref-01 
+
+- use useNavigation hook to navigate to other
+  screens if the component you are in can't be 
+  navigated to directly using navigation. This
+  can prevent from parent passing the navigation
+  down all the way to a deeply nested component.
+  - #ref-02
+
+
+  
+  
+
+
